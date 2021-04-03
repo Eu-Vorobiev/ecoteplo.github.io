@@ -1,0 +1,75 @@
+// Header Nav
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    list-style: none;
+    margin-left: 80px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -40px;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: $green;
+    }
+
+
+    &::after {
+      display: inline-block;
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      width: 0%;
+      height: 3px;
+      background-color: $white;
+    }
+    
+    &:hover,
+    &:focus {
+      &::after {
+        animation: bottomSlide .5s ease-in-out normal forwards;
+      }
+    }
+    
+    &:first-child {
+      margin-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+  
+  &__link {
+    padding: 5px 0px;
+    font-family: $exo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 1.4;
+    color: $white;
+  }
+}
+
+@keyframes bottomSlide {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+// Aside Nav (Numbers)
