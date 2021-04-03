@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -20,7 +21,9 @@ body {
   padding: 0 15px;
 }
 
-button, a, .btn {
+button,
+a,
+.btn {
   display: -ms-inline-flexbox;
   display: inline-flex;
   cursor: pointer;
@@ -35,6 +38,17 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.section__title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-family: "Russo One", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 3em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #000;
 }
 
 .btn {
@@ -79,6 +93,17 @@ img {
   transition: all 0.2s ease-in-out;
   -webkit-animation: slideDown 2s ease-in-out normal infinite;
           animation: slideDown 2s ease-in-out normal infinite;
+}
+
+.mask {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 @-webkit-keyframes slideDown {
@@ -210,10 +235,35 @@ img {
   position: relative;
 }
 
+.hero::before {
+  position: absolute;
+  content: "";
+  top: -131px;
+  left: 0;
+  right: 0;
+  z-index: -3;
+  width: 100%;
+  height: 320px;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  overflow: hidden;
+}
+
+.hero::after {
+  position: absolute;
+  content: "";
+  top: -131px;
+  left: 0;
+  right: 0;
+  bottom: -321px;
+  background: rgba(0, 0, 0, 0.13);
+  z-index: -5;
+  overflow: hidden;
+}
+
 .hero__bg {
   position: absolute;
   top: -131px;
-  z-index: -1;
+  z-index: -10;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center top;
@@ -222,7 +272,20 @@ img {
 
 .hero__container {
   padding: 160px 0px 0px;
+  margin-bottom: 300px;
   position: relative;
+}
+
+.hero__container::before {
+  position: absolute;
+  content: "";
+  top: -131px;
+  left: -155px;
+  bottom: -320px;
+  width: 1000px;
+  height: auto;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.64) 35.39%, rgba(0, 0, 0, 0.37) 63.45%, rgba(0, 0, 0, 0.14) 74.24%, rgba(196, 196, 196, 0) 82.87%);
+  z-index: -3;
 }
 
 .hero__content {
@@ -273,6 +336,11 @@ img {
       align-self: flex-start;
   -webkit-animation: flash 3s ease-in-out normal infinite;
           animation: flash 3s ease-in-out normal infinite;
+}
+
+.hero__btn:hover, .hero__btn:focus {
+  -webkit-animation: flash 1s ease-in-out normal infinite;
+          animation: flash 1s ease-in-out normal infinite;
 }
 
 @-webkit-keyframes rotate {
@@ -331,4 +399,203 @@ img {
   100% {
     background-color: #E7810A;
   }
+}
+
+.footer {
+  background-color: #000;
+  color: #FFF;
+}
+
+.footer__container {
+  padding: 60px 0px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.footer-top {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+
+.footer__logo {
+  margin-right: 100px;
+  transition: all .3s ease-in-out;
+}
+
+.footer__logo:hover, .footer__logo:focus {
+  -webkit-transform: skewX(20deg);
+      -ms-transform: skewX(20deg);
+          transform: skewX(20deg);
+}
+
+.footer__contacts {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.footer__contacts-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer__contacts-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer__contacts-text {
+  font-family: "Jura", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.7;
+}
+
+.footer__contacts-phone {
+  margin-left: 15px;
+  font-family: "Russo One", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.2;
+  transition: all .3s ease-in-out;
+}
+
+.footer__contacts-phone:hover, .footer__contacts-phone:focus {
+  -webkit-transform: scale(1.05, 1.05);
+      -ms-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.footer-bottom {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.footer__social-link {
+  transition: all .3s ease-in-out;
+  margin-left: 30px;
+}
+
+.footer__social-link:first-child {
+  margin-left: 60px;
+}
+
+.footer__social-link:hover, .footer__social-link:focus {
+  -webkit-transform: translate(8px, -10px);
+      -ms-transform: translate(8px, -10px);
+          transform: translate(8px, -10px);
+}
+
+.features {
+  position: relative;
+  background-image: url(../img/features-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.features__container {
+  padding: 140px 0px;
+  position: relative;
+  z-index: 10;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.features__title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.features__wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.features__item {
+  width: 27%;
+  margin-bottom: 90px;
+  cursor: pointer;
+}
+
+.card {
+  padding: 50px 50px 30px;
+  background: #FFF;
+  border: 2px solid #3FAF38;
+  box-shadow: 0px 2.4px 2.4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  text-align: center;
+  transition: all .3s ease-in-out;
+}
+
+.card.non-active {
+  background-color: #3FAF38;
+}
+
+.card.non-active > .card__title,
+.card.non-active .card__text {
+  opacity: 0;
+}
+
+.card__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 1.8em;
+  line-height: 1.5;
+  color: #3FAF38;
+  position: relative;
+}
+
+.card__title::after {
+  position: absolute;
+  content: "";
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 70px;
+  height: 1.5px;
+  background-color: #3FAF38;
+}
+
+.card__text {
+  margin: 0;
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 1.3em;
+  line-height: 1.5;
+  color: #000;
+}
+
+.card__icon {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -75%);
+      -ms-transform: translate(-50%, -75%);
+          transform: translate(-50%, -75%);
+  border-radius: 50%;
+  width: 15%;
 }

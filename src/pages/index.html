@@ -5,14 +5,14 @@
 @@include("parts/_header.html")
 <main>
   <!-- Hero -->
-  <section class="hero">
-    <img class="hero__bg"  src="img/hero-bg.jpg" alt="EcoTeplo Фоновое изображение">
+  <section class="hero" id="section1">
+    <img class="hero__bg" src="img/hero-bg.jpg" alt="EcoTeplo Фоновое изображение">
     <div class="container hero__container">
       <div class="hero__content">
         <h1 class="hero__title">Тепловые насосы для дома</h1>
         <div class="hero__object">
           <img class="hero__icon" src="img/think.svg" alt="Экономия более 70%">
-          <p class="hero__text">Экономия на отоплении  более 70%</p>
+          <p class="hero__text">Экономия на отоплении более 70%</p>
         </div>
         <button class="btn hero__btn btn--orange">Расcчитать</button>
       </div>
@@ -20,7 +20,59 @@
         <img class="arrow-down" src="img/arrow-down.svg" alt="Стрелка вниз">
       </div>
     </div>
-  </section>  <!-- ./ Hero-->
-  
+  </section> <!-- ./ Hero-->
+
+  <!-- Features -->
+  <section class="features" id="section2">
+    <div class="mask"></div>
+    <div class="container features__container">
+      <h2 class="section__title features__title">Преимущества</h2>
+      <!-- Features Wrap -->
+      <div class="features__wrap">
+        <div class="card features__item">
+          <h3 class="card__title">Экономичность</h3>
+          <p class="card__text">Низкие эксплуатационные затраты на отопление. 1 кВт/час тепловой
+            энергии стоит в среднем 1,25 руб.
+          </p>
+          <img class="card__icon" src="img/diagram.svg" alt="Экономичность">
+        </div>
+        <div class="card features__item non-active">
+          <h3 class="card__title">Низкие температуры</h3>
+          <p class="card__text">Низкие эксплуатационные затраты на отопление. 1 кВт/час тепловой
+            энергии стоит в среднем 1,25 руб.
+          </p>
+          <img class="card__icon card__icon--temp" src="img/temperature.svg" alt="Температура">
+        </div>
+        <div class="card features__item non-active">
+          <h3 class="card__title">Высокие темпаратуры</h3>
+          <p class="card__text">Низкие эксплуатационные затраты на отопление. 1 кВт/час тепловой
+            энергии стоит в среднем 1,25 руб.
+          </p>
+          <img class="card__icon card__icon--fire" src="img/fire.svg" alt="Огонь">
+        </div>
+        <div class="card features__item non-active">
+          <h3 class="card__title">Быстрая установка</h3>
+          <p class="card__text">Низкие эксплуатационные затраты на отопление. 1 кВт/час тепловой
+            энергии стоит в среднем 1,25 руб.
+          </p>
+          <img class="card__icon" src="img/arrow-down-rounded.svg" alt="Закругленная стрелка вниз">
+        </div>
+        <div class="card features__item non-active">
+          <h3 class="card__title">Легкая настройка</h3>
+          <p class="card__text">Низкие эксплуатационные затраты на отопление. 1 кВт/час тепловой
+            энергии стоит в среднем 1,25 руб.
+          </p>
+          <img class="card__icon" src="img/settings.svg" alt="Настройка">
+        </div>
+        <div class="card features__item non-active">
+          <h3 class="card__title">Безопасность</h3>
+          <p class="card__text">Низкие эксплуатационные затраты на отопление. 1 кВт/час тепловой
+            энергии стоит в среднем 1,25 руб.
+          </p>
+          <img class="card__icon" src="img/shield.svg" alt="Безопасность">
+        </div>
+      </div>  <!-- ./ Features Wrap-->
+    </div>
+  </section> <!-- ./ Features-->
 </main>
 @@include("parts/_footer.html")

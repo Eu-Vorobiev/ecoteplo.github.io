@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -20,7 +21,9 @@ body {
   padding: 0 15px;
 }
 
-button, a, .btn {
+button,
+a,
+.btn {
   display: inline-flex;
   cursor: pointer;
   font-family: inherit;
@@ -34,4 +37,17 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.section {
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+    font-family: $russo;
+    font-weight: 400;
+    font-size: 3em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: $black;
+  }
 }

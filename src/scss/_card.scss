@@ -1,0 +1,57 @@
+.card {
+  padding: 50px 50px 30px;
+  background: $white;
+  border: 2px solid $green;
+  box-shadow: 0px 2.4px 2.4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  text-align: center;
+  transition: all .3s ease-in-out;
+  &.non-active {
+    background-color: $green;
+    > .card__title,
+      .card__text {
+      opacity: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: $exo;
+    font-weight: 600;
+    font-size: 1.8em;
+    line-height: 1.5;
+    color: #3FAF38;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 1.5px;
+      background-color: $green;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-family: $exo;
+    font-weight: 500;
+    font-size: 1.3em;
+    line-height: 1.5;
+    color: $black;
+  }
+
+
+  &__icon {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    border-radius: 50%;
+    width: 15%;
+  }
+}
