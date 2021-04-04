@@ -54,7 +54,7 @@ img {
 .btn {
   background: none;
   border: none;
-  padding: 20px 80px;
+  padding: 15px 80px;
   color: #FFF;
   background-color: #3FAF38;
   border: 2px solid #3FAF38;
@@ -73,6 +73,25 @@ img {
 .btn--orange:hover, .btn--orange:focus {
   background-color: #cf7309;
   border-color: #cf7309;
+}
+
+.btn--sm {
+  padding: 20px 40px;
+  border-radius: 1.2em;
+}
+
+.btn--lg {
+  padding: 13px 150px;
+  border-radius: 1.4em;
+}
+
+.btn--lg:hover, .btn--lg:focus {
+  background-color: #389c32;
+  border-color: #389c32;
+}
+
+.btn--transparent {
+  background-color: transparent;
 }
 
 .slide-down {
@@ -103,7 +122,18 @@ img {
   right: 0;
   bottom: 0;
   z-index: 0;
+}
+
+.mask--features {
   background: rgba(255, 255, 255, 0.9);
+}
+
+.mask--sale {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.7392) 26.56%, rgba(0, 0, 0, 0.7392) 49.48%, rgba(0, 0, 0, 0) 100%);
+}
+
+.mask--work {
+  background: rgba(255, 255, 255, 0.88);
 }
 
 @-webkit-keyframes slideDown {
@@ -130,6 +160,168 @@ img {
             transform: translateY(30px);
     opacity: 0;
   }
+}
+
+.form {
+  background: rgba(0, 0, 0, 0.47);
+  border-radius: 1.9em;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+  line-height: 1.5;
+  text-align: center;
+  color: #FFF;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.form__label {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 25px;
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #FFF;
+}
+
+.form__label--radio {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.form__label--input {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.form__radio-inner {
+  margin: 25px 0px 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+}
+
+.form__radio-inner--floors {
+  margin: 20px 0px;
+}
+
+.form__radio-btn {
+  cursor: pointer;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.form__radio-btn input[type=radio] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.form__radio-btn label {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 18px 35px;
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 1.4em;
+  line-height: 1.4;
+  color: #FFF;
+  transition: all .3s ease-in-out;
+}
+
+.form__radio-btn label:hover {
+  opacity: .8;
+}
+
+.form__radio-btn input[type=radio]:checked + label {
+  background: #3FAF38;
+}
+
+.form__radio-btn label.floors {
+  padding: 23px 18px;
+  font-size: 1.1em;
+}
+
+.form__radio-btn label.floors sup {
+  top: -.1em;
+}
+
+.form__input {
+  width: 420px;
+  padding: 18px 30px;
+  background: #000;
+  border: 1px solid #3FAF38;
+  border-radius: 1.5em;
+  color: #FFF;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+
+.form__input::-webkit-input-placeholder {
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 1.4;
+  color: #FFF;
+  opacity: 1;
+}
+
+.form__input::-moz-placeholder {
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 1.4;
+  color: #FFF;
+  opacity: 1;
+}
+
+.form__input:-ms-input-placeholder {
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 1.4;
+  color: #FFF;
+  opacity: 1;
+}
+
+.form__input::placeholder {
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 1.4;
+  color: #FFF;
+  opacity: 1;
+}
+
+.form__input:hover, .form__input:focus {
+  border-color: #E7810A;
+  border-width: 2px;
+  outline: none;
 }
 
 .header__container {
@@ -598,4 +790,208 @@ img {
           transform: translate(-50%, -75%);
   border-radius: 50%;
   width: 15%;
+}
+
+.sale {
+  position: relative;
+  background-image: url(../img/sale-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sale__container {
+  padding: 140px 0px 150px;
+  position: relative;
+  z-index: 10;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.sale__content {
+  max-width: 800px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.sale__title {
+  margin: 0;
+  margin-bottom: 70px;
+  font-family: "Russo One", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 2.8em;
+  line-height: 1.5;
+  color: #FFF;
+}
+
+.sale__title span {
+  color: #3FAF38;
+  text-decoration: underline;
+}
+
+.sale__text {
+  margin: 0;
+  padding: 25px 40px;
+  border: 1.7px solid #FFF;
+  border-radius: .8em;
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 1.9em;
+  line-height: 1.5;
+  color: #FFF;
+}
+
+.sale__form {
+  padding: 50px 50px;
+  max-width: 650px;
+  margin-right: -60px;
+  margin-top: -30px;
+}
+
+.sale__form-title {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 500px;
+}
+
+.sale__btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.sale__price-img {
+  position: absolute;
+  z-index: 20;
+  transition: all .3s ease-in-out;
+}
+
+.sale__price-img--sm {
+  bottom: 338px;
+  left: 50px;
+  -webkit-animation: rotate 5s ease-in-out 1s normal infinite;
+          animation: rotate 5s ease-in-out 1s normal infinite;
+}
+
+.sale__price-img--md {
+  bottom: 372px;
+  left: 490px;
+  -webkit-animation: rotate 5s ease-in-out 2s normal infinite;
+          animation: rotate 5s ease-in-out 2s normal infinite;
+}
+
+.sale__price-img--lg {
+  bottom: 342px;
+  left: 1014px;
+  -webkit-animation: rotate 5s ease-in-out 3s normal infinite;
+          animation: rotate 5s ease-in-out 3s normal infinite;
+}
+
+.work {
+  background-image: url(../img/work-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.work__container {
+  padding: 140px 0px 80px;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.work__photo {
+  margin-bottom: 90px;
+  position: relative;
+  transition: all .5s ease-in-out;
+}
+
+.work__photo--bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 48.96%, rgba(255, 255, 255, 0.6) 100%);
+  border-radius: 3.2em;
+}
+
+.work__item {
+  position: absolute;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  z-index: 2;
+  transition: all .3s ease-in-out;
+}
+
+.work__item:nth-child(2) {
+  top: 170px;
+  left: 480px;
+}
+
+.work__item:nth-child(3) {
+  top: 60px;
+  left: 690px;
+}
+
+.work__item:nth-child(4) {
+  top: 170px;
+  right: 470px;
+}
+
+.work__item:nth-child(4) .work__icon {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.work__item:nth-child(5) {
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+  bottom: 90px;
+  right: 695px;
+}
+
+.work__item:hover .work__text, .work__item:focus .work__text {
+  opacity: 1;
+}
+
+.work__img {
+  position: relative;
+  z-index: 2;
+}
+
+.work__text {
+  opacity: 0;
+  font-family: "Russo One", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 1.4;
+  color: #000;
+}
+
+.work__btn {
+  padding: 15px 60px;
+  transition: all .3s ease-in-out;
+}
+
+.work__btn:hover, .work__btn:focus {
+  background-color: #389c32;
+  border-color: #389c32;
 }

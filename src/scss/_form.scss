@@ -1,0 +1,122 @@
+.form {
+  background: rgba(0, 0, 0, 0.47);
+  border-radius: 1.9em;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    font-family: $exo;
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 1.5;
+    text-align: center;
+    color: $white;
+    border-bottom: .5px solid rgba(255, 255, 255, 0.5);
+  }
+
+  &__label {
+    display: inline-flex;
+    margin-bottom: 25px;
+    font-family: $exo;
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: $white;
+
+    &--radio {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--input {
+      align-self: center;
+    }
+  }
+
+  &__radio {
+    &-inner {
+      margin: 25px 0px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      &--floors {
+        margin: 20px 0px;
+      }
+    }
+
+    &-btn {
+      cursor: pointer;
+      display: inline-flex;
+
+      input[type=radio] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+      }
+
+      label {
+        display: inline-flex;
+        user-select: none;
+        padding: 18px 35px;
+        font-family: $exo;
+        font-weight: 700;
+        font-size: 1.4em;
+        line-height: 1.4;
+        color: $white;
+        transition: all .3s ease-in-out;
+
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+
+      input[type=radio]:checked+label {
+        background: $green;
+      }
+
+      label.floors {
+        padding: 23px 18px;
+        font-size: 1.1em;
+        sup {
+          top: -.1em;
+        }
+      }
+
+    }
+  }
+
+  &__input {
+    width: 420px;
+    padding: 18px 30px;
+    background: $black;
+    border: 1px solid $green;
+    border-radius: 1.5em;
+    color: $white;
+    opacity: 1;
+    transition: all .3s ease-in-out;
+
+    &::placeholder {
+      font-family: $exo;
+      font-weight: 500;
+      font-size: 1.2em;
+      line-height: 1.4;
+      color: $white;
+      opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $orange;
+      border-width: 2px;
+      outline: none;
+    }
+  }
+}

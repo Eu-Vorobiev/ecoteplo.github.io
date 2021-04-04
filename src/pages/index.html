@@ -24,7 +24,7 @@
 
   <!-- Features -->
   <section class="features" id="section2">
-    <div class="mask"></div>
+    <div class="mask mask--features"></div>
     <div class="container features__container">
       <h2 class="section__title features__title">Преимущества</h2>
       <!-- Features Wrap -->
@@ -71,8 +71,99 @@
           </p>
           <img class="card__icon" src="img/shield.svg" alt="Безопасность">
         </div>
-      </div>  <!-- ./ Features Wrap-->
+      </div> <!-- ./ Features Wrap-->
     </div>
   </section> <!-- ./ Features-->
+
+  <!-- Sale -->
+  <section class="sale">
+    <div class="mask mask--sale"></div>
+    <div class="container sale__container">
+      <div class="sale__content">
+        <h2 class="sale__title">Тепловые насосы гарантированно <span>экономят 70%</span> от стоимости отопления</h2>
+        <p class="sale__text">Эти 3 дома в сумме экономят 158.000 рублей в год!</p>
+      </div>
+      <!-- Form -->
+      <form class="form sale__form" action="php/send.php" method="POST">
+        <h3 class="form__title sale__form-title">Рассчитайте свою экономию на отоплении</h3>
+        <!-- Radio 1 -->
+        <label class="form__label form__label--radio" for="radio" aria-required="true">
+          Количество этажей в вашем доме
+          <div class="form__radio-inner">
+            <div class="form__radio-btn">
+              <input id="radio-1" type="radio" name="radio" value="1"checked>
+              <label class="btn btn--sm btn--transparent" for="radio-1">1 этаж</label>
+            </div>
+            <div class="form__radio-btn">
+              <input id="radio-2" type="radio" name="radio" value="2">
+              <label class="btn btn--sm btn--transparent" for="radio-2">2 этажа</label>
+            </div>
+          </div>
+        </label> <!-- ./ Radio 1-->
+        <!-- Radio 2 -->
+        <label class="form__label form__label--radio" for="radio1" aria-required="true">
+          Площадь вашего дома
+          <div class="form__radio-inner form__radio-inner--floors">
+            <div class="form__radio-btn">
+              <input id="radio-3" type="radio" name="radio1" value="49">
+              <label class="btn btn--sm btn--transparent floors" for="radio-3">до 50 м<sup>2</sup></label>
+            </div>
+            <div class="form__radio-btn">
+              <input id="radio-4" type="radio" name="radio1" value="99" checked>
+              <label class="btn btn--sm btn--transparent floors" for="radio-4">50 - 100 м<sup>2</sup></label>
+            </div>
+            <div class="form__radio-btn">
+              <input id="radio-5" type="radio" name="radio1" value="101">
+              <label class="btn btn--sm btn--transparent floors" for="radio-5">более 100 м<sup>2</sup></label>
+            </div>
+          </div>
+        </label> <!-- ./ Radio 2-->
+        <label class="form__label form__label--input" for="phone">
+          <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ваш телефон"
+            title="Введите Ваш номер телефона" required>
+        </label>
+        <label class="form__label form__label--input" for="email">
+          <input class="form__input" type="email" name="email" id="email" placeholder="Ваш e-mail"
+            title="Введите Ваш e-mail" required>
+        </label>
+        <button class="btn btn--lg sale__btn form__btn" type="submit">Отправить</button>
+      </form> <!-- ./ Form-->
+    </div>
+    <img class="sale__price-img sale__price-img--sm" src="img/price-sm.svg" alt="45000 рублей">
+    <img class="sale__price-img sale__price-img--md" src="img/price-md.svg" alt="51000 рублей">
+    <img class="sale__price-img sale__price-img--lg" src="img/price-lg.svg" alt="62000 рублей">
+  </section>
+
+  <!-- How It Works -->
+  <section class="work">
+    <div class="mask mask--work"></div>
+    <div class="container work__container">
+      <h2 class="section__title work__title">Принципы работы теплового насоса</h2>
+      <!-- Work Photo -->
+      <div class="work__photo">
+        <img class="work__img" src="img/shema.png" alt="Принципы работы">
+        <div class="work__item">
+          <span class="work__text">Испаритель</span>
+          <img class="work__icon" src="img/plus.svg" alt="Подробнее">
+        </div>
+        <div class="work__item">
+          <span class="work__text">Компрессор</span>
+          <img class="work__icon" src="img/plus.svg" alt="Подробнее">
+        </div>
+        <div class="work__item">
+          <span class="work__text">Конденсатор</span>
+          <img class="work__icon" src="img/plus.svg" alt="Подробнее">
+        </div>
+        <div class="work__item">
+          <span class="work__text">Расширительный клапан</span>
+          <img class="work__icon" src="img/plus-up.svg" alt="Подробнее">
+        </div>
+        <div class="work__photo--bg"></div>
+      </div>  <!-- ./ Work Photo-->
+      <a class="btn work__btn" href="#">Узнать подробнее</a>
+    </div>
+  </section>  <!-- ./ How It Works-->
+
+
 </main>
 @@include("parts/_footer.html")

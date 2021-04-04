@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let arrowDown = document.querySelector(".slide-down");
   let sectionFeatures = document.getElementById("section2");
 
-  console.log(sectionFeatures);
   arrowDown.addEventListener("click", () => {
     window.scroll(0, (sectionFeatures.clientHeight + 50));
   });
@@ -20,4 +19,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })
   });
+
+  // Mask on How It Works
+  let maskWork = document.querySelector(".work__photo--bg");
+  let shemaWork = document.querySelector(".work__photo");
+
+  shemaWork.addEventListener("mouseenter", () => {
+    maskWork.style.zIndex = 0;
+  });
+  shemaWork.addEventListener("mouseleave", () => {
+    maskWork.style.zIndex = 2;
+  });
+
 });

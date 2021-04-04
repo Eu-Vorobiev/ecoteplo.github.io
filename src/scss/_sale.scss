@@ -1,0 +1,90 @@
+.sale {
+  position: relative;
+  background-image: url(../img/sale-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    padding: 140px 0px 150px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 70px;
+    font-family: $russo;
+    font-weight: 400;
+    font-size: 2.8em;
+    line-height: 1.5;
+    color: $white;
+
+    span {
+      color: $green;
+      text-decoration: underline;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    padding: 25px 40px;
+    border: 1.7px solid $white;
+    border-radius: .8em;
+    font-family: $exo;
+    font-weight: 500;
+    font-size: 1.9em;
+    line-height: 1.5;
+    color: $white;
+  }
+
+  &__form {
+    padding: 50px 50px;
+    max-width: 650px;
+    margin-right: -60px;
+    margin-top: -30px;
+
+    &-title {
+      display: inline-flex;
+      align-self: center;
+      max-width: 500px;
+    }
+  }
+
+  &__btn {
+    align-self: center;
+  }
+
+  &__price {
+    &-img {
+      position: absolute;
+      z-index: 20;
+      transition: all .3s ease-in-out;
+
+      &--sm {
+        bottom: 338px;
+        left: 50px;
+        animation: rotate 5s ease-in-out 1s normal infinite;
+      }
+      
+      &--md {
+        bottom: 372px;
+        left: 490px;
+        animation: rotate 5s ease-in-out 2s normal infinite;
+      }
+      
+      &--lg {
+        bottom: 342px;
+        left: 1014px;
+        animation: rotate 5s ease-in-out 3s normal infinite;
+      }
+    }
+  }
+}
