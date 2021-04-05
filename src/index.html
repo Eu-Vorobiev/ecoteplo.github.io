@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css?family=Russo+One:regular&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Exo:regular,500,700,800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Jura:300,regular,500,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -105,7 +107,7 @@
   </section> <!-- ./ Features-->
 
   <!-- Sale -->
-  <section class="sale">
+  <section class="sale" id="section3">
     <div class="mask mask--sale"></div>
     <div class="container sale__container">
       <div class="sale__content">
@@ -164,7 +166,7 @@
   </section>
 
   <!-- How It Works -->
-  <section class="work">
+  <section class="work" id="section4">
     <div class="mask mask--work"></div>
     <div class="container work__container">
       <h2 class="section__title work__title">Принципы работы теплового насоса</h2>
@@ -193,7 +195,69 @@
     </div>
   </section>  <!-- ./ How It Works-->
 
-
+  <section class="reviews">
+    <div class="mask mask--reviews"></div>
+    <div class="container reviews__container">
+      <h2 class="section__title reviews__title">Отзывы</h2>
+      <div class="swiper-container reviews__slider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img class="swiper-slide__img" src="img/reviews-author.png" alt="Автор">
+            <h3 class="swiper-slide__author">Семен Слепаков</h3>
+            <p class="swiper-slide__text">Без переплат - Фиксированная стоимость ремонта после оценки по фото.
+              Фиксированная стоимость ремонта после оценки по фото.
+              Бесплатный выезд - в черте Спб в Ваш подземный паркинг, гараж, СТО.
+              </p>
+            <div class="swiper-slide__footer">
+              <div class="swiper-slide__social">
+                <img src="img/insta.svg" alt="Instagram">
+                <a class="swiper-slide__origin" href="#">Источник</a>
+              </div>
+              <div class="swiper-slide__date">14.12.2020</div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-slide__img" src="img/reviews-author.png" alt="Автор">
+            <h3 class="swiper-slide__author">Виктор Андреев</h3>
+            <p class="swiper-slide__text">Без переплат - Фиксированная стоимость ремонта после оценки по фото.
+              Фиксированная стоимость ремонта после оценки по фото.
+              Бесплатный выезд - в черте Спб в Ваш подземный паркинг, гараж, СТО.
+              </p>
+            <div class="swiper-slide__footer">
+              <div class="swiper-slide__social">
+                <img src="img/insta.svg" alt="Instagram">
+                <a class="swiper-slide__origin" href="#">Источник</a>
+              </div>
+              <div class="swiper-slide__date">23.08.2020</div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-slide__img" src="img/reviews-author.png" alt="Автор">
+            <h3 class="swiper-slide__author">Ингрид Давиденко</h3>
+            <p class="swiper-slide__text">Без переплат - Фиксированная стоимость ремонта после оценки по фото.
+              Фиксированная стоимость ремонта после оценки по фото.
+              Бесплатный выезд - в черте Спб в Ваш подземный паркинг, гараж, СТО.
+              </p>
+            <div class="swiper-slide__footer">
+              <div class="swiper-slide__social">
+                <img src="img/insta.svg" alt="Instagram">
+                <a class="swiper-slide__origin" href="#">Источник</a>
+              </div>
+              <div class="swiper-slide__date">10.03.2020</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
 </main>
   <footer class="footer">
     <div class="container footer__container">
@@ -231,6 +295,8 @@
     </div>
   </footer>
   
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/draft/main.js"></script>
 </body>
 

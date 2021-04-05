@@ -31,4 +31,20 @@ document.addEventListener("DOMContentLoaded", function () {
     maskWork.style.zIndex = 2;
   });
 
+  // SLIDER
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    spaceBetween: 40,
+    initialSlide: 1,
+  
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+
 });

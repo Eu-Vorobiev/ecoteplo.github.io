@@ -1,0 +1,19 @@
+.reviews {
+  position: relative;
+  background-image: url(../img/reviews-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    position: relative;
+    padding: 130px 0px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 100px;
+    color: $white;
+  }
+}
