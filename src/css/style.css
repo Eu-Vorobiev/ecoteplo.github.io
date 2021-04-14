@@ -140,6 +140,10 @@ img {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.mask--faq {
+  background: rgba(252, 249, 249, 0.88);
+}
+
 @-webkit-keyframes slideDown {
   0% {
     opacity: 1;
@@ -626,9 +630,9 @@ img {
   position: absolute;
   content: "";
   top: -131px;
-  left: -155px;
+  left: -200px;
   bottom: -320px;
-  width: 1000px;
+  width: 100%;
   height: auto;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.64) 35.39%, rgba(0, 0, 0, 0.37) 63.45%, rgba(0, 0, 0, 0.14) 74.24%, rgba(196, 196, 196, 0) 82.87%);
   z-index: -3;
@@ -1171,4 +1175,159 @@ img {
 .reviews__title {
   margin-bottom: 100px;
   color: #FFF;
+}
+
+.faq {
+  padding: 140px 0px 50px;
+  background-image: url(../img/faq-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.faq__container {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.faq__title {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.faq__accordion {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.faq__action {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.faq__btn {
+  padding: 15px 50px;
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.4;
+  transition: all .3s ease-in-out;
+}
+
+.faq__btn:hover, .faq__btn:focus {
+  background-color: #389c32;
+  border-color: #389c32;
+  color: #000;
+}
+
+.accordion {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-bottom: 150px;
+}
+
+.accordion__item {
+  padding: 40px 40px 30px 55px;
+  background-color: #FFF;
+  min-width: 1300px;
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion__item:last-child {
+  margin-bottom: 0;
+}
+
+.accordion__item.active > .accordion__text {
+  display: block;
+}
+
+.accordion__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.accordion__text {
+  margin: 0;
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  display: none;
+}
+
+.accordion__img {
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.accordion__img:hover, .accordion__img:focus {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.promo {
+  background-image: url(../img/promo-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 1080px;
+  position: relative;
+}
+
+.promo__container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 50px 90px 50px 0px;
+  position: relative;
+}
+
+.promo__title {
+  border: 2px solid #33CA2A;
+  border-radius: 19px;
+  padding: 25px 30px;
+  color: #FFF;
+  text-transform: initial;
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 800px;
+}
+
+.promo__img {
+  position: absolute;
+  top: 330px;
+  left: 50%;
+  transition: all .3s ease-in-out;
+  display: inline-block;
+  -webkit-animation: rotate 3s ease-in-out normal infinite;
+          animation: rotate 3s ease-in-out normal infinite;
+}
+
+.promo__img.visible {
+  display: none;
 }

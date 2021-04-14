@@ -1,0 +1,59 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 150px;
+
+  &__item {
+    padding: 40px 40px 30px 55px;
+    background-color: $white;
+    min-width: 1300px;
+    margin-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.active {
+      >.accordion__text {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: $exo;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    color: $black;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: $exo;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $black;
+    display: none;
+  }
+
+  &__img {
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      transform: rotate(45deg);
+    }
+  }
+}

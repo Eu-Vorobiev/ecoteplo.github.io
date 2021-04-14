@@ -1,0 +1,43 @@
+.faq {
+  padding: 140px 0px 50px;
+  background-image: url(../img/faq-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 90px;
+  }
+
+  &__accordion {
+    align-self: center;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    padding: 15px 50px;
+    font-family: $exo;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.4;
+    transition: all .3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: darken($green, 5%);
+      border-color: darken($green, 5%);
+      color: $black;
+    }
+  }
+}

@@ -36,15 +36,34 @@ document.addEventListener("DOMContentLoaded", function () {
     loop: true,
     spaceBetween: 40,
     initialSlide: 1,
-  
+
     pagination: {
       el: '.swiper-pagination',
     },
-  
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     }
   });
 
+  // ACCORDION
+  let accordionItem = document.querySelectorAll(".accordion__item");
+
+  accordionItem.forEach(e => {
+    e.addEventListener("click", () => {
+      e.classList.toggle("active");
+    });
+  });
+
+  // SCROLL IN #7 SECTION
+  // let promoImg = document.querySelector(".promo__img");
+
+  // window.addEventListener("scroll", function () {
+  //   if (promoImg.clientHeight + window.scrollY >= promoImg.offsetTop + 400) {
+  //     promoImg.classList.add("visible");
+  //   } else {
+  //     promoImg.classList.remove("visible");
+  //   }
+  // });
 });
