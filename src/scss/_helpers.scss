@@ -24,25 +24,40 @@
   right: 0;
   bottom: 0;
   z-index: 0;
+
   //  FEATURES
   &--features {
     background: rgba(255, 255, 255, 0.9);
   }
+
   //  SALE
   &--sale {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.7392) 26.56%, rgba(0, 0, 0, 0.7392) 49.48%, rgba(0, 0, 0, 0) 100%);
   }
+
   // WORK
   &--work {
     background: rgba(255, 255, 255, 0.88);
   }
+
   // REVIEWS
   &--reviews {
     background: rgba(0, 0, 0, 0.5);
   }
+
   //  FAQ
   &--faq {
     background: rgba(252, 249, 249, 0.88);
+  }
+
+  //  PLANS
+  &--plans {
+    background: rgba(255, 255, 255, 0.88);
+  }
+
+  // CALLBACK
+  &--callback {
+    background: rgba(0, 0, 0, 0.16);
   }
 }
 
@@ -52,6 +67,7 @@
     opacity: 1;
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(30px);
     opacity: 0;

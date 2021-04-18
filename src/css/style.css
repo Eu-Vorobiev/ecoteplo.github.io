@@ -144,6 +144,14 @@ img {
   background: rgba(252, 249, 249, 0.88);
 }
 
+.mask--plans {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.mask--callback {
+  background: rgba(0, 0, 0, 0.16);
+}
+
 @-webkit-keyframes slideDown {
   0% {
     opacity: 1;
@@ -283,7 +291,7 @@ img {
   width: 420px;
   padding: 18px 30px;
   background: #000;
-  border: 1px solid #3FAF38;
+  border: 2px solid #3FAF38;
   border-radius: 1.5em;
   color: #FFF;
   opacity: 1;
@@ -1330,4 +1338,231 @@ img {
 
 .promo__img.visible {
   display: none;
+}
+
+.plans {
+  padding: 140px 0px 200px;
+  background-image: url(../img/work-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.plans__container {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.plans__title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 80px;
+}
+
+.plans__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+}
+
+.plans__item {
+  padding: 50px;
+  box-shadow: 6px 8px 11px #000;
+  background-color: #FFF;
+  background: #238b12;
+  background: linear-gradient(172deg, #238b12 0%, #238b12 30%, white 30%, white 85%, #a6e395 85%);
+  border-radius: 1.3em;
+  max-width: 500px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  transition: all .3s ease-in-out;
+}
+
+.plans__item--sm {
+  background: linear-gradient(172deg, #238b12 0%, #238b12 27%, white 27%, white 85%, #a6e395 85%);
+}
+
+.plans__item:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.plans__heading {
+  margin: 0;
+  margin-bottom: 50px;
+  max-width: 240px;
+  font-family: "Russo One", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 1.7em;
+  line-height: 1.4;
+  color: #FFF;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.plans__heading span {
+  text-transform: uppercase;
+}
+
+.plans__price {
+  margin-bottom: 25px;
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #000;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.plans__price img {
+  height: 55px;
+  vertical-align: bottom;
+  margin-right: 8px;
+}
+
+.plans__price b {
+  font-size: 3em;
+}
+
+.plans__features {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-family: "Jura", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 1.4;
+  color: #000;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.plans__features img {
+  margin-right: 15px;
+}
+
+.plans__btn {
+  margin-top: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  transition: all .3s ease-in-out;
+  -webkit-animation: flashBtn 3s ease-in-out normal infinite;
+          animation: flashBtn 3s ease-in-out normal infinite;
+}
+
+.plans__btn:hover, .plans__btn:focus {
+  background-color: #389c32;
+  border-color: #389c32;
+}
+
+@-webkit-keyframes flashBtn {
+  0% {
+    background-color: #3FAF38;
+    border: 2px solid #3FAF38;
+  }
+  25% {
+    background-color: #458a40;
+    border: 2px solid #458a40;
+  }
+  50% {
+    background-color: #2e5e2b;
+    border: 2px solid #2e5e2b;
+  }
+  75% {
+    background-color: #458a40;
+    border: 2px solid #458a40;
+  }
+  100% {
+    background-color: #3FAF38;
+    border: 2px solid #3FAF38;
+  }
+}
+
+@keyframes flashBtn {
+  0% {
+    background-color: #3FAF38;
+    border: 2px solid #3FAF38;
+  }
+  25% {
+    background-color: #458a40;
+    border: 2px solid #458a40;
+  }
+  50% {
+    background-color: #2e5e2b;
+    border: 2px solid #2e5e2b;
+  }
+  75% {
+    background-color: #458a40;
+    border: 2px solid #458a40;
+  }
+  100% {
+    background-color: #3FAF38;
+    border: 2px solid #3FAF38;
+  }
+}
+
+.callback {
+  background-image: url(../img/callback-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.callback::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 25px;
+  z-index: 5;
+  background-color: #000;
+}
+
+.callback__container {
+  position: relative;
+  padding: 130px 0px;
+}
+
+.callback__form {
+  max-width: 600px;
+  padding: 45px 45px 75px;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.callback__form .form__title {
+  max-width: 100%;
+}
+
+.callback__form .form__input {
+  width: 470px;
+}
+
+.ringer {
+  position: absolute;
+  left: 1055px;
+  bottom: 300px;
+  -webkit-animation: rotate 5s ease-in-out normal infinite;
+          animation: rotate 5s ease-in-out normal infinite;
 }
