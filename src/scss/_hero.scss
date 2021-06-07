@@ -12,6 +12,11 @@
     height: 320px;
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
     overflow: hidden;
+    @media (max-width: 1366px) {
+      top: -85px;
+      height: 100%;
+      min-height: 25vh;
+    }
   }
 
   &::after {
@@ -24,6 +29,11 @@
     background: rgba(0, 0, 0, 0.13);
     z-index: -5;
     overflow: hidden;
+    @media (max-width: 1366px) {
+      top: -85px;
+      bottom: 0;
+      min-height: 100vh;
+    }
   }
 
   &__bg {
@@ -32,12 +42,21 @@
     z-index: -10;
     object-fit: cover;
     object-position: center top;
+    @media (max-width: 1366px) {
+      min-height: 100vh;
+      width: 100%;
+      top: -83px;
+    }
   }
 
   &__container {
-    padding: 160px 0px 0px;
+    padding: 100px 0px 0px;
     margin-bottom: 300px;
     position: relative;
+    @media (max-width: 1366px) {
+      padding: 50px 0px 0px;
+      margin-bottom: 50px;
+    }
 
     &::before {
       position: absolute;
@@ -49,6 +68,12 @@
       height: auto;
       background: linear-gradient(90deg, rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.64) 35.39%, rgba(0, 0, 0, 0.37) 63.45%, rgba(0, 0, 0, 0.14) 74.24%, rgba(196, 196, 196, 0) 82.87%);
       z-index: -3;
+      @media (max-width: 1366px) {
+        height: 100vh;
+        top: -83px;
+        left: -130px;
+        bottom: 0;
+      }
     }
   }
 
@@ -67,6 +92,14 @@
     line-height: 1.2;
     color: $white;
     text-transform: uppercase;
+    @media (max-width: 1366px) {
+      margin-bottom: 50px;
+      max-width: 470px;
+      font-size: 3em;
+    }
+    span {
+      color: $green;
+    }
   }
 
   &__object {
@@ -74,6 +107,9 @@
     transform-style: preserve-3d;
     align-self: flex-start;
     animation: rotate 3s ease-in-out normal infinite;
+    @media (max-width: 1366px) {
+      max-width: 250px;
+    }
   }
 
   &__text {
@@ -87,6 +123,11 @@
     line-height: 1.1;
     text-align: center;
     color: $white;
+    @media (max-width: 1366px) {
+      top: 5px;
+      left: 0;
+      font-size: 1.5em;
+    }
   }
 
   &__btn {

@@ -4,13 +4,28 @@ document.addEventListener("DOMContentLoaded", function () {
   let sectionFeatures = document.getElementById("section2");
 
   arrowDown.addEventListener("click", () => {
-    window.scroll(0, (sectionFeatures.clientHeight + 50));
+    window.scroll(0, (sectionFeatures.clientHeight + 25));
+  });
+
+  // Scroll by Sections
+  let sideNavBtn = document.querySelectorAll(".side-nav__link");
+
+  sideNavBtn.forEach( e => {
+    e.addEventListener("click", function () {
+      if (e.classList.contains("active")) {
+        
+      } else {
+        e.parentNode(".side-nav__item").children(".side-nav__link").classList.remove("active");
+        this.classList.add("active");
+    
+      }
+    })
   });
 
   // Features Card
   let featuresCard = document.querySelectorAll(".features__item");
 
-  featuresCard.forEach(e => {
+  featuresCard.forEach(e  => {
     e.addEventListener("click", function () {
       if (e.classList.contains("non-active")) {
         this.classList.toggle("non-active");

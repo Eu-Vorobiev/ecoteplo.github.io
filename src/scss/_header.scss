@@ -4,9 +4,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 1366px) {
+      padding: 10px 0px;
+    }
   }
   &__logo {
     transition: all .3s ease-in-out;
+    @media (max-width: 1366px) {
+      max-width: 230px;
+    }
     &:hover, &:focus {
       transform: scale3d(1.1, 1.02, 1.05);
     }

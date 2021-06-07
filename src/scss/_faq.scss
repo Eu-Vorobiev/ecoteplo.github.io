@@ -9,6 +9,18 @@
     position: relative;
     display: flex;
     flex-direction: column;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -60px;
+      left: -60px;
+      right: 0;
+      bottom: 0px;
+      width: 110%;
+      height: 103%;
+      border: 2px solid #3FAF38;
+    }
   }
 
   &__title {
@@ -23,6 +35,8 @@
   &__action {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 20;
   }
 
   &__btn {

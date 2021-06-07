@@ -10,20 +10,44 @@
     z-index: 10;
     display: flex;
     flex-direction: column;
+    @media (max-width: 1366px) {
+      padding: 60px 0px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 60px;
+      left: -60px;
+      right: 0;
+      bottom: 0px;
+      width: 110%;
+      height: 85%;
+      border: 2px solid #3FAF38;
+      @media (max-width: 1366px) {
+        top: 40px;
+      }
+    }
   }
+
   &__title {
     align-self: center;
   }
+
   &__wrap {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
+
   &__item {
     width: 27%;
     margin-bottom: 90px;
     cursor: pointer;
+
+    @media (max-width: 1366px) {
+      margin-bottom: 50px;
+    }
   }
 }
-
