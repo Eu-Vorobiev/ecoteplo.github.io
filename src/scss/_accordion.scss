@@ -3,6 +3,10 @@
   flex-direction: column;
   margin-bottom: 150px;
 
+  @media (max-width: 1366px) {
+    margin-bottom: 100px;
+  }
+
   &__item {
     padding: 40px 40px 30px 55px;
     background-color: $white;
@@ -11,9 +15,15 @@
     position: relative;
     cursor: pointer;
 
+    @media (max-width: 1366px) {
+      padding: 20px 30px;
+      min-width: 900px;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
+
     &.active {
       >.accordion__text {
         display: block;
@@ -29,6 +39,10 @@
     font-size: 24px;
     line-height: 1.5;
     color: $black;
+
+    @media (max-width: 1366px) {
+      font-size: 20px;
+    }
   }
 
   &__text {
@@ -50,6 +64,13 @@
     height: 30px;
     cursor: pointer;
     transition: all .3s ease-in-out;
+
+    @media (max-width: 1366px) {
+      top: 23px;
+      right: 30px;
+      width: 24px;
+      height: 24px;
+    }
 
     &:hover,
     &:focus {

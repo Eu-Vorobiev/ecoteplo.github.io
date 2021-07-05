@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let sectionFeatures = document.getElementById("section2");
 
   arrowDown.addEventListener("click", () => {
-    window.scroll(0, (sectionFeatures.clientHeight + 25));
+    window.scroll(0, sectionFeatures.clientHeight + 25);
   });
 
   // Scroll between Sections 
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
 
-      const blockID = anchor.getAttribute('href').substr(1)
+      const blockID = anchor.getAttribute('href').substr(1);
 
       document.getElementById(blockID).scrollIntoView({
         behavior: 'smooth',
@@ -28,14 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   sideNavBtn.forEach(e => {
     e.addEventListener("click", function () {
-      if (e.classList.contains("active")) {
-
-      } else {
+      if (e.classList.contains("active")) {} else {
         e.parentNode(".side-nav__item").children(".side-nav__link").classList.remove("active");
         this.classList.add("active");
-
       }
-    })
+    });
   });
 
   // Features Card
@@ -48,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         this.classList.toggle("non-active");
       }
-    })
+    });
   });
 
   // Mask on How It Works
@@ -69,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initialSlide: 1,
 
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination'
     },
 
     navigation: {

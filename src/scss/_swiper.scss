@@ -5,6 +5,23 @@
 
   &-container {
     width: 1200px;
+
+    @media (max-width: 1366px) {
+      width: 900px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 700px;
+    }
+
+    @media (max-width: 768px) {
+      width: 450px;
+    }
+
+    @media (max-width: 475px) {
+      width: 300px;
+    }
+
   }
 
   &-button {
@@ -52,6 +69,10 @@
   &-pagination {
     bottom: 100px;
 
+    @media (max-width: 1366px) {
+      bottom: 70px;
+    }
+
     &-bullet {
       width: 18px;
       height: 16px;
@@ -79,12 +100,20 @@
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 1366px) {
+      padding: 50px 80px;
+    }
+
     &__img {
       border-radius: 50%;
       align-self: center;
       width: 95px;
       height: 95px;
       margin-bottom: 30px;
+
+      @media (max-width: 1366px) {
+        margin-bottom: 20px;
+      }
     }
 
     &__author {
@@ -96,6 +125,11 @@
       font-size: 2.2em;
       line-height: 1.4;
       color: $white;
+
+      @media (max-width: 1366px) {
+        margin-bottom: 30px;
+        font-size: 2em;
+      }
     }
 
     &__text {
@@ -106,6 +140,11 @@
       font-size: 1.8em;
       line-height: 1.5;
       color: rgba(255, 255, 255, 0.9);
+
+      @media (max-width: 1366px) {
+        font-size: 1.6em;
+        margin-bottom: 60px;
+      }
     }
 
     &__footer {
@@ -128,6 +167,11 @@
       color: #0085FF;
       transition: all .3s ease-in-out;
 
+      @media (max-width: 1366px) {
+        font-size: 1.5em;
+        margin-left: 15px;
+      }
+
       &:hover,
       &:focus {
         text-decoration: underline;
@@ -140,6 +184,10 @@
       font-size: 1.8em;
       line-height: 1.4;
       color: rgba(255, 255, 255, 0.6);
+
+      @media (max-width: 1366px) {
+        font-size: 1.5em;
+      }
     }
   }
 }
